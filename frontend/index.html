@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Private Knowledge Q&A</title>
+    <meta charset="UTF-8">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Private Knowledge Q&A</h1>
+
+<!-- ============================= -->
+<!-- Upload Section -->
+<!-- ============================= -->
+<div class="section">
+    <h2>1️⃣ Upload Document</h2>
+
+    <div class="row">
+        <input type="file" id="fileInput">
+        <button onclick="uploadFile()">Upload</button>
+    </div>
+
+    <p id="uploadStatus"></p>
+
+    <h3 class="subheading">Uploaded Documents</h3>
+    <div id="documentsBox"></div>
+
+    <div class="row">
+        <button onclick="loadDocuments()">Refresh List</button>
+        <button class="clear-btn" onclick="clearDocuments()">Clear List</button>
+    </div>
+</div>
+
+<!-- ============================= -->
+<!-- Ask Question Section -->
+<!-- ============================= -->
+<div class="section">
+    <h2>2️⃣ Ask Question</h2>
+
+    <div class="row">
+        <input type="text" id="questionInput" placeholder="Enter your question">
+        <button onclick="askQuestion()">Ask</button>
+    </div>
+
+    <p><strong>Answer:</strong></p>
+    <div id="answerBox"></div>
+
+    <p><strong>Sources:</strong></p>
+    <div id="sourcesBox"></div>
+</div>
+
+<!-- ============================= -->
+<!-- System Status Section -->
+<!-- ============================= -->
+<div class="section">
+    <h2>3️⃣ System Status</h2>
+    <button onclick="checkStatus()">Check Status</button>
+    <pre id="statusBox"></pre>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
